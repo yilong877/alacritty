@@ -1,0 +1,126 @@
+# 设置环境变量
+env:
+  TERM: xterm-256color
+
+# 设置窗口
+window:
+  dimensions:
+    columns: 120
+    lines: 30
+  #
+  decorations: none
+  # 设置透明度
+  opacity: 0.85
+  # 打开模式
+  startup_mode: Windowed
+  # 窗口标题
+  title: Alacritty
+  # 是否允许应用更改窗口标题
+  dynamic_title: true
+  # 设置 gtk_theme
+  gtk_theme_variant: dark
+
+# 回滚
+scrolling:
+  # 回滚缓冲区最大行数，如果为 0，则禁用回滚
+  history: 10000
+  # 回滚行数
+multiplier: 3
+
+
+# 字体设置
+font:
+  # 常规
+  normal:
+    family: hack
+    style: Regular
+  # 粗体
+  bold:
+    family: hack
+    style: Bold
+  # 斜体
+  italic:
+    family: hack
+    style: Italic
+  # 斜粗体
+  bold_italic:
+    family: hack
+    style: Bold Italic
+  # 字体大小
+  size: 9
+  offset:
+    x: 0
+    y: 0
+
+  use_thin_strokes: true
+
+  builtin_box_drawing: true
+
+
+draw_bold_text_with_bright_colors: true
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t@="
+  save_to_clipboard: false
+
+
+# 设置光标样式
+cursor:
+  style:
+    shape: Block
+    blinking: on
+
+  vi_mode_style: None
+  # 光标闪烁间隔
+  blink_interval: 750
+  # 当窗口未聚集时，将光标置为空心框
+  unfocused_hollow: true
+  thickness: 0.15
+
+# 配置热更新
+live_config_reload: true
+
+# Shell
+shell:
+  program: /bin/zsh
+  args:
+    - --login
+
+
+# 启动时的工作目录
+working_directory: None
+
+
+# Alt 和字符连按的时候发送 ESC(\x1b)
+alt_send_esc: false
+
+# 主题设置
+colors:
+  # Default colors
+  primary:
+    # hard contrast: background = '0x1d2021'
+    background: '0x282828'
+    # soft contrast: background = '0x32302f'
+    foreground: '0xebdbb2'
+
+  # Normal colors
+  normal:
+    black:   '0x282828'
+    red:     '0xcc241d'
+    green:   '0x98971a'
+    yellow:  '0xd79921'
+    blue:    '0x458588'
+    magenta: '0xb16286'
+    cyan:    '0x689d6a'
+    white:   '0xa89984'
+
+  # Bright colors
+  bright:
+    black:   '0x928374'
+    red:     '0xfb4934'
+    green:   '0xb8bb26'
+    yellow:  '0xfabd2f'
+    blue:    '0x83a598'
+    magenta: '0xd3869b'
+    cyan:    '0x8ec07c'
+    white:   '0xebdbb2'
